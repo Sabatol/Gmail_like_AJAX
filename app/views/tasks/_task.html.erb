@@ -1,0 +1,1 @@
+<li id="<%= task.id %>"><%= link_to "", task_path(task.id), method: "DELETE", class: "fas fa-trash-alt", remote: true %><%= task.title %>, to read: <%= task.deadline.to_time.strftime('%D')  %></li>
