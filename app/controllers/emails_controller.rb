@@ -19,7 +19,7 @@ require 'faker'
   end
 
   def create
-    @email = Email.new(object: Faker::Lorem.word, body: Faker::Lorem.sentence)
+    @email = Email.new(object: Faker::Esport.event,body: Faker::Book.title)
     if @email.save
       respond_to do |format|
       format.html { redirect_to root_path }

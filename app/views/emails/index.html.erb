@@ -1,17 +1,17 @@
 <div class="container">
   <div class="row d-flex justify-content-center pb-5">
     <%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
-      <%= submit_tag 'Recevoir un email', :class => 'btn btn-info'%>
+      <%= submit_tag 'Recevoir un email', :class => 'btn btn-danger'%>
     <% end %>
   </div>
   <div class="row d-flex justify-content-around">
-    <div class="col-5 text-center">
+    <div class="col-5 text-center" style="overflow:scroll; height: 31.25rem;">
       <table class="table" id="create-email">
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Email object</th>
-            <th scope="col">Lu</th>
+            <th scope="col">Yoyoyo</th>
           </tr>
         </thead>
         <% @emails.each do |email| %>
