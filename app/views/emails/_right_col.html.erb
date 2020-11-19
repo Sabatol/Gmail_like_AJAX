@@ -1,5 +1,5 @@
 <div id="email-content" class="d-flex justify-content-center m-0 p-0">
-  <div class="card p-3 bg-dark d-flex align-items-center" style="width: 15rem;">
+  <div class="card p-4 bg-dark" style="width: 15rem;">
     <ul>
       <li><b class="text-white"><%=email.object%></b></li>
       <br/>
@@ -7,7 +7,7 @@
       <br/>
       <li><%=link_to "Supprimer", email_path(email.id), method: "DELETE", class: "btn btn-secondary", remote: true %></li>
       <br/>
-      <li id="button-read"><%=link_to "Marquer comme non lu", email_path(email.id), method: "PATCH", class: "btn btn-secondary", remote: true %></li>
+      <li id="button-read"><%=link_to "Non lu", email_path(email.id), method: "PATCH", class: "btn btn-secondary", remote: true %></li>
     </ul>
   </div>
 </div>
