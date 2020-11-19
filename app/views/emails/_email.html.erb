@@ -1,0 +1,13 @@
+<tbody id="<%=email.id%>">
+  <tr>
+    <th scope="row"><%=email.id%></th>
+    <td><%=link_to "#{email.object}", email_path(email.id), remote: true%></td>
+    <td id="id<%=email.id%>">
+      <% if email.read == false%>
+        <i class="far fa-envelope fa-2x"></i>
+      <%elsif email.read == true%>
+        <i class="far fa-envelope-open fa-2x"></i>
+      <%end%>
+    </td>
+  </tr>
+</tbody>

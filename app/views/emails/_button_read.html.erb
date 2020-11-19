@@ -1,0 +1,5 @@
+<% if email.read%>
+  <li id="button-read"><%=link_to "Marquer comme non lu", email_path(email.id), method: "PATCH", class: "btn btn-secondary", remote: true %></li>
+<%else%>
+  <li id="button-read"><%=link_to "Marquer comme lu", email_path(email.id), method: "PATCH", class: "btn btn-secondary", remote: true %></li>
+<%end%>

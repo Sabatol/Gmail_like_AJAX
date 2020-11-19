@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row d-flex justify-content-center pb-5">
+    <%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
+      <%= submit_tag 'Recevoir un email', :class => 'btn btn-info'%>
+    <% end %>
+  </div>
+  <div class="row d-flex justify-content-around">
+    <div class="col-5 text-center">
+      <table class="table" id="create-email">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Email object</th>
+            <th scope="col">Lu</th>
+          </tr>
+        </thead>
+        <% @emails.each do |email| %>
+          <tbody id="<%=email.id%>">
+            <tr>
+              <th scope="row"><%=email.id%></th>
+              <td><%=link_to "#{email.object}", email_path(email.id), remote: true%></td>
+              <td id="id<%=email.id%>">
+                <% if email.read == false%>
+                  <i class="far fa-envelope fa-2x"></i>
+                <%elsif email.read == true%>
+                  <i class="far fa-envelope-open fa-2x"></i>
+                <%end%>
+              </td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+    </div>
+    <div class="col-5 text-center" id="email-show">
+    </div>
+  </div>

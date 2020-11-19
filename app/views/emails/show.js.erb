@@ -1,0 +1,3 @@
+$("#email-content").remove();
+$("#email-show").append("<%=j render 'right_col', email: @email%>");
+$("#id<%=@email.id%>").replaceWith("<%=j render 'row_read', email: @email%>");

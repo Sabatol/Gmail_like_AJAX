@@ -1,0 +1,13 @@
+<div id="email-content" class="d-flex column m-3 p-0">
+  <div class="card p-3 bg-info" style="width:15rem">
+    <ul>
+      <li><b class="bg-light rounded p-2"><%=email.object%></b></li>
+      <br/>
+      <li class="bg-light rounded p-0"><%=email.body%></li>
+      <br/>
+      <li><%=link_to "Supprimer", email_path(email.id), method: "DELETE", class: "btn btn-secondary", remote: true %></li>
+      <br/>
+      <li id="button-read"><%=link_to "Marquer comme non lu", email_path(email.id), method: "PATCH", class: "btn btn-secondary", remote: true %></li>
+    </ul>
+  </div>
+</div>
