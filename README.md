@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 Things you may want to cover:
 
-* Ruby version
+- URL du projet
+  https://mailing-ajax.herokuapp.com/
 
-* System dependencies
+- Ruby version
+  2.5.1
 
-* Configuration
+- System dependencies
+  Rails 5.2.1
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Configuration
+  - fork ou clone le repo en local
+  - system(bundle install)
+  - system(rails db:migrate db:seed)
+  - system(rails s)
+  - url: localhost:3000/
